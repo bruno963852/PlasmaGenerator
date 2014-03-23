@@ -1,0 +1,25 @@
+Como usar o bluetooh no seu jogo:
+
+1 - Após importar esse pacote para o seu projeto (lógico), ajuste as configurações para compilação
+para android. Vá em Edit/Project Setings/Player, na sessão do android, na subsessão Other Settings
+altere o nome do Bundle Identifier para um correto. ex: com.<nome da empresa>.<Nome do App>.
+
+2 - Após isso salve a cena, vá em File/Build Settings, selecione android e dê Build para compilar o 
+apk do projeto. Isso é importante para que as diretivas de compilador já sejam identificadas e seja
+gerado o manifesto padrão do app
+
+3 - O manifesto padrão gerado pelo Unity não dá permissão para uso do Bluetooth, portanto, você terá
+de ir (sem fechar o unity) na pasta Temp/StagingArea dentro da pasta do projeto, lá você vai encotrar
+o AndoroidManifest.xml gerado. Copie esse arquivo para a pasta Plugins/Android, esse manifesto irá
+bypassar o gerador do Unity.
+
+4 - Abra o manifesto, e abaixo da linha que diz "<manifest xmlns:android........" insira as seguintes
+linhas e salve:
+
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+Isso irá dar permissão para usar o bluetooth.
+
+5 - Agora basta usar a classe BluetoothController para acessar os métodos de comunicação bluetooth.
+Vide comentários na própria classe.

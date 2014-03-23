@@ -3,68 +3,41 @@ using System.Collections;
 
 public class ShipController : MonoBehaviour 
 {
-	//Estado de movimento da nave
-	public ShipMovingState movingState = ShipMovingState.notMoving;
 	//Velocidade máxima padrão de movimento da nave
-	public float standardSpeed = 5;
-	//Aceleração da nave
-	public float accel = 0.1f;
+	public float standardMaxSpeed = 8;
 
+	//Animator da nave
+	private Animator animator;
+	//controlador de eixo do input
+	private AxisController axisController;
 
-	// Use this for initialization
 	void Start () 
 	{
-		
+		axisController = GetComponent<AxisController>();
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (gameManager.i.btController.getLeftButtonDown() && this.movingState != ShipMovingState.movingLeft)
-		{
-			movingState = ShipMovingState.movingLeft;
+		rigidbody2D.velocity = new Vector2(axisController.axis * standardMaxSpeed, 0);
+		animator.SetFloat("Speed", rigidbody2D.velocity.x / standardMaxSpeed);
 
-			this.rigidbody2D.velocity = new Vector2(-standardSpeed, 0);
+		Vector3 thePosition;
+
+		if (transform.position.x < -7.5f)
+		{
+			thePosition = transform.position;
+			thePosition.x = -7.5f;
+			transform.position = thePosition;
 		}
-		if (gameManager.i.btController.getRightButtonDown() && this.movingState != ShipMovingState.movingRight)
+		else if (transform.position.x > 7.5f)
 		{
-
-			movingState = ShipMovingState.movingRight;
-
-			this.rigidbody2D.velocity = new Vector2(standardSpeed, 0);
+			thePosition = transform.position;
+			thePosition.x = 7.5f;
+			transform.position = thePosition;
 		}
-		if ((gameManager.i.btController.getLeftButtonUp() && this.movingState == ShipMovingState.movingLeft)
-		    || (gameManager.i.btController.getRightButtonUp() && this.movingState == ShipMovingState.movingRight))
-		{
-			movingState = ShipMovingState.notMoving;
-
-			this.rigidbody2D.velocity = Vector2.zero;
-		}
-		if (this.transform.position.x > 7.5f)
-		{
-			this.rigidbody2D.velocity = Vector2.zero;
-
-			Vector3 position = this.transform.position;
-
-			position.x = 7.5f;
-
-			this.transform.position = position;
-		}
-		if (this.transform.position.x < -7.5f)
-		{
-			this.rigidbody2D.velocity = Vector2.zero;
 			
-			Vector3 position = this.transform.position;
-			
-			position.x = -7.5f;
-			
-			this.transform.position = position;
-		}
+
 	}
-}
-public enum ShipMovingState
-{
-	movingLeft,
-	movingRight,
-	notMoving
 }

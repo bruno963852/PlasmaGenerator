@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: 34d4753bcf8184f30b87a01382cb01ed
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: destructions_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 203
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 203
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 202
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 202
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 202
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 202
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 201
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 201
+        width: 94
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 204
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 204
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_11
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 175
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 174
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_13
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 174
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 174
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 174
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 173
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 173
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 174
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_19
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 175
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_20
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 175
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_23
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 175
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_24
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 175
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_25
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 175
+        width: 7
+        height: 19
+      alignment: 9
+      pivot: {x: 3.57005954, y: 1.08307135}
+    - name: destructions_32
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 158
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_63
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 94
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_64
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 91
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_65
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 90
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 89
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_67
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 89
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_68
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 87
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_69
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 87
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 87
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_71
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 87
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_72
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 86
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_73
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 102
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_74
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 102
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_75
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 102
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_76
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 102
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_77
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 99
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_78
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 86
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 85
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_81
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 85
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_82
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 88
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_83
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 88
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_84
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 88
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: explosionA_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 66
+        width: 4
+        height: 10
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 63
+        width: 7
+        height: 15
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 62
+        width: 8
+        height: 16
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 61
+        width: 10
+        height: 18
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 61
+        width: 10
+        height: 18
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 62
+        width: 9
+        height: 17
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 61
+        width: 9
+        height: 19
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 60
+        width: 10
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_10
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 60
+        width: 10
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 59
+        width: 11
+        height: 22
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_12
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 59
+        width: 11
+        height: 22
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: explosionA_13
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 58
+        width: 11
+        height: 24
+      alignment: 5
+      pivot: {x: 1, y: .5}
+    - name: destructions_97
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 74
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_98
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 74
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_99
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 74
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_100
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 71
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_101
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 72
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_102
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 60
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_103
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 60
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_104
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 60
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_105
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 57
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_106
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 57
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_107
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 59
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_112
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 44
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_122
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 28
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_21
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 175
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: destructions_22
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 175
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: explosionA_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 69
+        width: 2
+        height: 5
+      alignment: 5
+      pivot: {x: 1, y: .5}
+  spritePackingTag: 
+  userData: 

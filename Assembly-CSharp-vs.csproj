@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />
+     <Compile Include="Assets\Scripts\destroyTimer.cs" />
+     <Compile Include="Assets\Scripts\enemyDestroyscript.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
      <None Include="Assets\Plugins\Android\Como usar o plugin.txt" />
   </ItemGroup>

@@ -720,5 +720,41 @@ TextureImporter:
         height: 5
       alignment: 5
       pivot: {x: 1, y: .5}
+    - name: explosionB_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 145
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: explosionB_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 144
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: explosionB_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 143
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: explosionB_4
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 144
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

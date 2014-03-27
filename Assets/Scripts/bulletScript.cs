@@ -4,6 +4,8 @@ using System.Collections;
 public class bulletScript : MonoBehaviour 
 {
 	public float speed = 15;
+	public float damage = 2;
+	public GameObject explosion;
 
 
 	void Start () 
@@ -19,5 +21,11 @@ public class bulletScript : MonoBehaviour
 		{
 			Destroy (this.gameObject);
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Instantiate(explosion, transform.position, Quaternion.identity);
+		Destroy(this.gameObject);
 	}
 }

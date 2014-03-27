@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Prefabs\Sounds\soundPrefabDestroyer.cs" />
      <Compile Include="Assets\Scripts\AxisController.cs" />
      <Compile Include="Assets\Scripts\BackGroundPassScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />

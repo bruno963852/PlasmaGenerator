@@ -12,20 +12,13 @@ public class bulletScript : MonoBehaviour
 	{
 		this.rigidbody2D.velocity = new Vector2(0, speed);
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if(transform.position.y >= 6 || transform.position.y <= -6 ||
-		   transform.position.x >= 9 || transform.position.x <= -9)
-		{
-			Destroy (this.gameObject);
-		}
-	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Instantiate(explosion, transform.position, Quaternion.identity);
-		Destroy(this.gameObject);
+		if (other.tag.Equals("Enemy"))
+		{
+			Instantiate(explosion, transform.position, Quaternion.identity);
+			Destroy(this.gameObject);
+		}
 	}
 }

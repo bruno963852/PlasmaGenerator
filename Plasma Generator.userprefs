@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyZigZag.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/enemyShotScripts.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyZigZag.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/EnemyZigZag.cs" Line="20" Column="68" />
+      <File FileName="Assets/Scripts/enemyShotScripts.cs" Line="22" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

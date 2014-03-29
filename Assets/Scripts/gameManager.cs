@@ -9,6 +9,8 @@ public class gameManager : MonoBehaviour
 	//Controlador BlueTooh
 	public BlueToothController btController;
 
+	public int points = 0;
+
 	void Awake()
 	{
 		//Se não houver nenhuma instância
@@ -35,7 +37,8 @@ public class gameManager : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
 	}
 }

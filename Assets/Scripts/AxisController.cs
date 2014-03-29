@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AxisController : MonoBehaviour {
+public class AxisController : MonoBehaviour 
+{
 
 	public float axis = 0;
 	public float sensitivity = 0.03f;

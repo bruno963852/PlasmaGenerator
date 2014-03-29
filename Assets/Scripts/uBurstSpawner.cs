@@ -13,19 +13,23 @@ public class uBurstSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		updateTime = Time.timeSinceLevelLoad;
+		updateTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 
-		if (updateTime + spawnTime <= Time.timeSinceLevelLoad && spawnCount < burstSize)
+		if (updateTime + spawnTime <= Time.time && spawnCount < burstSize)
 		{
 			Instantiate(enemy_u, transform.position, Quaternion.identity);
 
 			updateTime = Time.time;
 			spawnCount++;
+		}
+		if (spawnCount >= burstSize)
+		{
+			Destroy(gameObject);
 		}
 	}
 }

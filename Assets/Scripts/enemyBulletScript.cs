@@ -8,6 +8,7 @@ public class enemyBulletScript : MonoBehaviour
 	public GameObject explosion;
 	public Vector3 direction;
 	public Vector2 velocity;
+	public int pointsLoose = 0;
 	
 	void Start () 
 	{
@@ -22,6 +23,7 @@ public class enemyBulletScript : MonoBehaviour
 		if (other.tag.Equals("Player"))
 		{
 			Instantiate(explosion, transform.position, Quaternion.identity);
+			gameManager.i.points -= pointsLoose;
 			Destroy(this.gameObject);
 		}
 	}

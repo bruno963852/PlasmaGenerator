@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Esse script é o gerenciador do jogo
+//Se comporta como um singletom
 public class gameManager : MonoBehaviour 
 {
 	//Instância do Singleton
@@ -9,8 +11,10 @@ public class gameManager : MonoBehaviour
 	//Controlador BlueTooh
 	public BlueToothController btController;
 
+	//Pontuação
 	public int points = 0;
 
+	//Logo antes de instanciar
 	void Awake()
 	{
 		//Se não houver nenhuma instância
@@ -30,9 +34,10 @@ public class gameManager : MonoBehaviour
 		}
 	}
 
-	// Use this for initialization
+	// Ao instanciar
 	void Start () 
 	{
+		//inicializa o controlador BT
 		this.btController = new BlueToothController();
 	}
 	

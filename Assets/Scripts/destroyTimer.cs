@@ -1,23 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class destroyTimer : MonoBehaviour {
-
+//Aplicar esse script a um objeto que vc quer que
+//se auto destrua depois de um certo tempo
+public class destroyTimer : MonoBehaviour 
+{
+	//tempo para se auto destruir
 	public float time = 1;
 
+	//guarda tempo anterior
 	private float updateTime;
 
-	// Use this for initialization
+	// Ao instanciar
 	void Start () 
 	{
+		//salva o tempo.
 		updateTime = Time.time;
 	}
 	
-	// Update is called once per frame
+	// A cada frame
 	void Update () 
 	{
+		//se passou o tempo especificado
 		if (updateTime + time <= Time.time)
 		{
+			//destroi esse objeto
 			Destroy(this.gameObject);
 		}
 	}

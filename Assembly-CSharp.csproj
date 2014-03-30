@@ -54,13 +54,13 @@
      <Compile Include="Assets\Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\EnemyaxisController.cs" />
      <Compile Include="Assets\Scripts\FlashScript.cs" />
-     <Compile Include="Assets\Scripts\GUIScript.cs" />
      <Compile Include="Assets\Scripts\OBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />
+     <Compile Include="Assets\Scripts\Stage01GUIScript.cs" />
      <Compile Include="Assets\Scripts\bulletScript.cs" />
      <Compile Include="Assets\Scripts\destroyTimer.cs" />
-     <Compile Include="Assets\Scripts\enemyBulletScript.cs" />
+     <Compile Include="Assets\Scripts\enemyBulletFollowScript.cs" />
      <Compile Include="Assets\Scripts\enemyDestroyscript.cs" />
      <Compile Include="Assets\Scripts\enemyFollowPlayerX.cs" />
      <Compile Include="Assets\Scripts\enemyShotScripts.cs" />

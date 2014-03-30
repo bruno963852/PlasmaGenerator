@@ -562,9 +562,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 218
-        y: 71
+        y: 70
         width: 9
-        height: 13
+        height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
     - name: enemysA_75

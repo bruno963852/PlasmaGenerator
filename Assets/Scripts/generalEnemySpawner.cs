@@ -27,9 +27,6 @@ public class generalEnemySpawner : MonoBehaviour
 
 			Instantiate(bursts[burstCount], thePosition, Quaternion.identity);
 
-			Debug.Log("Instantianted in: " + Time.time + "Suposed: " + spawnTimes[burstCount]);
-			Debug.Log("updateTime + spawntime = " + updateTime + spawnTimes[burstCount]);
-
 			updateTime = Time.time;
 			burstCount++;
 		}

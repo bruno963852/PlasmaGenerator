@@ -24,6 +24,7 @@ public class enemyBulletScript : MonoBehaviour
 		{
 			Instantiate(explosion, transform.position, Quaternion.identity);
 			gameManager.i.points -= pointsLoose;
+			other.GetComponent<FlashScript>().flash();
 			Destroy(this.gameObject);
 		}
 	}

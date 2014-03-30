@@ -8,6 +8,7 @@ public class EnemyaxisController : MonoBehaviour {
 	public float gravity = 0.1f;
 	public float deadZone = 0.03f;
 	public bool restatOnPress = false;
+	public bool isExternallySetted = false;
 
 	public FakeButtonState[] fakePresses;
 	public float[] fakePressesTimes;
@@ -27,7 +28,10 @@ public class EnemyaxisController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		doMoviment();
+		if (!isExternallySetted)
+		{
+			doMoviment();
+		}
 
 		if (bState == FakeButtonState.negative)
 		{

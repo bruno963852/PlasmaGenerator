@@ -3,23 +3,35 @@ using System.Collections;
 
 public class EnemyZigZag : MonoBehaviour {
 
-	public float zigZagSpeed = 1;
-	public float zigZagAmplitude = 2;
-	public float goSpeed = 3;
+	public float maxSpeed = 6;
+	public float zigZagTime = 1;
 
-	public Vector2 velocity;
-	// Use this for initialization
+
+	private EnemyaxisController xAxisController;
+	private float updateTime;
+ 	// Use this for initialization
 	void Start () 
 	{
-		velocity = new Vector2();
+		xAxisController = GetComponents<EnemyaxisController>()[0];
+		updateTime = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		velocity.x = Mathf.Sin(Time.time * zigZagSpeed) * zigZagAmplitude;
-		velocity.y = -goSpeed;
+		if (updateTime + zigZagTime <= Time.time)
+		{
+			if (xAxisController.bState == FakeButtonState.negative)
+			{
+				xAxisController.bState = FakeButtonState.positive;
+			}
+			else
+			{
+				xAxisController.bState = FakeButtonState.negative;
+			}
 
-		this.rigidbody2D.velocity = velocity;
+			updateTime = Time.time;
+		}
+		rigidbody2D.velocity = new Vector2(xAxisController.axis * maxSpeed, -maxSpeed);
 	}
 }

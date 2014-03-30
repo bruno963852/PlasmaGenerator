@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\EnemyMovementController.cs" />
      <Compile Include="Assets\Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\EnemyaxisController.cs" />
+     <Compile Include="Assets\Scripts\FlashScript.cs" />
      <Compile Include="Assets\Scripts\GUIScript.cs" />
      <Compile Include="Assets\Scripts\OBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\ShipController.cs" />
@@ -61,9 +62,11 @@
      <Compile Include="Assets\Scripts\destroyTimer.cs" />
      <Compile Include="Assets\Scripts\enemyBulletScript.cs" />
      <Compile Include="Assets\Scripts\enemyDestroyscript.cs" />
+     <Compile Include="Assets\Scripts\enemyFollowPlayerX.cs" />
      <Compile Include="Assets\Scripts\enemyShotScripts.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\generalEnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\spikeBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\uBurstSpawner.cs" />
      <None Include="Assets\Plugins\Android\Como usar o plugin.txt" />
   </ItemGroup>

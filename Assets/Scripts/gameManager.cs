@@ -32,13 +32,15 @@ public class gameManager : MonoBehaviour
 			//Destrua essa instância
 			Destroy(this.gameObject);
 		}
+
+		//inicializa o controlador BT
+		this.btController = new BlueToothController();
 	}
 
 	// Ao instanciar
 	void Start () 
 	{
-		//inicializa o controlador BT
-		this.btController = new BlueToothController();
+
 	}
 	
 	// Update is called once per frame

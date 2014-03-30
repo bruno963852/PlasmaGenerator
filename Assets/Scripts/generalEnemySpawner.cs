@@ -24,7 +24,7 @@ public class generalEnemySpawner : MonoBehaviour
 	void Start () 
 	{
 		//salva o tempo
-		updateTime = Time.time;
+		updateTime = Time.timeSinceLevelLoad;
 		//o numero maximo de ondas é o tamanho do vetor de ondas
 		maxBursts = bursts.Length;
 	}
@@ -33,7 +33,7 @@ public class generalEnemySpawner : MonoBehaviour
 	void Update () 
 	{
 		//se ainda tiver onda pra ser gerada e tiver passado o tempo de gerar
-		if((burstCount < maxBursts) && ((updateTime + spawnTimes[burstCount]) <= Time.time))
+		if((burstCount < maxBursts) && ((updateTime + spawnTimes[burstCount]) <= Time.timeSinceLevelLoad))
 		{
 			//salva a posição
 			Vector3 thePosition = transform.position;
@@ -44,7 +44,7 @@ public class generalEnemySpawner : MonoBehaviour
 			Instantiate(bursts[burstCount], thePosition, Quaternion.identity);
 
 			//atualiza o tempo
-			updateTime = Time.time;
+			updateTime = Time.timeSinceLevelLoad;
 			//incrementa a contagem de ondas
 			burstCount++;
 		}

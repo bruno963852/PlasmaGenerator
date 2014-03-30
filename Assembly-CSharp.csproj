@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\generalEnemySpawner.cs" />
      <Compile Include="Assets\Scripts\spikeBurstSpawner.cs" />
+     <Compile Include="Assets\Scripts\startScreenGUI.cs" />
      <Compile Include="Assets\Scripts\uBurstSpawner.cs" />
      <None Include="Assets\Plugins\Android\Como usar o plugin.txt" />
   </ItemGroup>

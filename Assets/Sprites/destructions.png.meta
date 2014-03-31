@@ -135,132 +135,132 @@ TextureImporter:
         height: 18
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: destructions_10
+    - name: explosionC_1
       rect:
         serializedVersion: 2
         x: 0
         y: 175
         width: 4
         height: 8
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_11
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_2
       rect:
         serializedVersion: 2
         x: 12
         y: 175
         width: 4
         height: 10
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_12
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_3
       rect:
         serializedVersion: 2
         x: 24
         y: 174
         width: 4
         height: 13
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_13
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_4
       rect:
         serializedVersion: 2
         x: 36
         y: 174
         width: 5
         height: 15
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_14
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_5
       rect:
         serializedVersion: 2
         x: 48
         y: 174
         width: 6
         height: 17
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_15
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_6
       rect:
         serializedVersion: 2
         x: 60
         y: 174
         width: 7
         height: 18
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_16
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_7
       rect:
         serializedVersion: 2
         x: 72
         y: 173
         width: 9
         height: 20
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_17
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_8
       rect:
         serializedVersion: 2
         x: 84
         y: 173
         width: 11
         height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_18
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_9
       rect:
         serializedVersion: 2
         x: 96
         y: 174
         width: 11
         height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_19
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_10
       rect:
         serializedVersion: 2
         x: 108
         y: 175
         width: 11
         height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_20
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_11
       rect:
         serializedVersion: 2
-        x: 119
+        x: 120
         y: 175
-        width: 13
+        width: 12
         height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_23
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_14
       rect:
         serializedVersion: 2
         x: 156
-        y: 175
+        y: 176
         width: 11
-        height: 20
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_24
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_15
       rect:
         serializedVersion: 2
         x: 168
-        y: 175
+        y: 176
         width: 11
-        height: 20
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_25
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_16
       rect:
         serializedVersion: 2
         x: 180
-        y: 175
+        y: 176
         width: 7
         height: 19
-      alignment: 9
-      pivot: {x: 3.57005954, y: 1.08307135}
+      alignment: 4
+      pivot: {x: 0, y: .5}
     - name: destructions_32
       rect:
         serializedVersion: 2
@@ -693,24 +693,24 @@ TextureImporter:
         height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: destructions_21
+    - name: explosionC_12
       rect:
         serializedVersion: 2
         x: 132
         y: 175
         width: 12
         height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: destructions_22
+      alignment: 4
+      pivot: {x: 0, y: .5}
+    - name: explosionC_13
       rect:
         serializedVersion: 2
         x: 144
-        y: 175
-        width: 12
-        height: 21
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        y: 176
+        width: 11
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: .5}
     - name: explosionA_1
       rect:
         serializedVersion: 2

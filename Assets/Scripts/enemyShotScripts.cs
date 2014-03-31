@@ -6,6 +6,9 @@ public class enemyShotScripts : MonoBehaviour
 {
 	//prefab da bala
 	public GameObject shot;
+	//se, ao invés de um tiro, sera instanciado uma
+	//rajada de tiros
+	public bool isBurst = false;
 	//prefab do som do tiro
 	//(criei prefabs separados para os soms, para que
 	//eles não sejam interrompidos quando a bala for
@@ -32,8 +35,12 @@ public class enemyShotScripts : MonoBehaviour
 		{
 			//Instancia a bala
 			Instantiate (shot, transform.position, Quaternion.identity);
-			//Instancia o som da bala
-			Instantiate(laserSound, transform.position, Quaternion.identity);
+			//se não for uma rajada
+			if (!isBurst)
+			{
+				//Instancia o som da bala
+				Instantiate(laserSound, transform.position, Quaternion.identity);
+			}
 
 			//Salva o tempo
 			updateTime = Time.time;

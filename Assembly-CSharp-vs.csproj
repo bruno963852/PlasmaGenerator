@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\EnemyaxisController.cs" />
      <Compile Include="Assets\Scripts\FlashScript.cs" />
+     <Compile Include="Assets\Scripts\GeneralBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\OBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\Scripts\enemyShotScripts.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
      <Compile Include="Assets\Scripts\generalEnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\shotBurst.cs" />
      <Compile Include="Assets\Scripts\spikeBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\startScreenGUI.cs" />
      <Compile Include="Assets\Scripts\uBurstSpawner.cs" />

@@ -37,7 +37,7 @@ public class EnemyaxisController : MonoBehaviour
 	//numero máximo de apertadas
 	public int moves;
 	//guarda tempo anterior
-	public float updateTime;
+	public float updateTime = 0;
 
 	// Ao instanciar
 	void Start () 
@@ -48,7 +48,7 @@ public class EnemyaxisController : MonoBehaviour
 		moves = fakePresses.Length;
 
 		//Salva o tempo
-		updateTime = Time.time;
+		//updateTime = Time.time;
 	}
 	
 	// A cada frame

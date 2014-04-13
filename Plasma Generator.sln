@@ -5,6 +5,8 @@ Project("{5ED47DC5-B61B-547A-42BD-B40938CE989D}") = "Plasma Generator", "Assembl
 EndProject
 Project("{5ED47DC5-B61B-547A-42BD-B40938CE989D}") = "Plasma Generator", "Assembly-CSharp.csproj", "{6A449638-0D8A-494B-3845-8864E0D3C2CC}"
 EndProject
+Project("{5ED47DC5-B61B-547A-42BD-B40938CE989D}") = "Plasma Generator", "Assembly-CSharp-Editor.csproj", "{0B77F62C-C553-5D39-D9AB-5DDC91F4DFB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{6A449638-0D8A-494B-3845-8864E0D3C2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A449638-0D8A-494B-3845-8864E0D3C2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A449638-0D8A-494B-3845-8864E0D3C2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B77F62C-C553-5D39-D9AB-5DDC91F4DFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B77F62C-C553-5D39-D9AB-5DDC91F4DFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B77F62C-C553-5D39-D9AB-5DDC91F4DFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B77F62C-C553-5D39-D9AB-5DDC91F4DFB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

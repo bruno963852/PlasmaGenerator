@@ -156,7 +156,7 @@ public class BlueToothController {
 	//Retorna a rpm da bicicleta
 	public int getRpm()
 	{
-		return Random.Range(7, 9);
+		return Random.Range(6, 10);
 	}
 	
 	//Retorna o pulso do individio

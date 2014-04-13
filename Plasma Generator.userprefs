@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GeneralBurstSpawner.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ShotScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/shotBurst.cs" Line="34" Column="27" />
-      <File FileName="Assets/Scripts/enemyShotScripts.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/enemyDestroyscript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyMovementController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GeneralBurstSpawner.cs" Line="14" Column="14" />
-      <File FileName="Assets/Scripts/OBurstSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/gameManager.cs" Line="21" Column="25" />
+      <File FileName="Assets/Scripts/PointsGUIScript.cs" Line="4" Column="29" />
+      <File FileName="Assets/Scripts/TimeGUIScript.cs" Line="20" Column="52" />
+      <File FileName="Assets/Scripts/ShotScript.cs" Line="49" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

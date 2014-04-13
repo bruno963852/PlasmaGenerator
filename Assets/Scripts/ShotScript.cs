@@ -5,13 +5,15 @@ using System.Collections;
 public class ShotScript : MonoBehaviour 
 {
 	//tempo entre tiros
-	public float shotTime = 0.3f;
+	public float shotTime = 0.1f;
 	//prefab da bala
-	public GameObject bullet;
+	public GameObject[] bullets;
 	//prefab do som do tiro
 	public GameObject laserSound;
 	//rotação do sprite da bala
 	public Vector3 rotation;
+	//bala atual
+	private GameObject currentBullet;
 
 	//tempo...
 	private float updateTime;
@@ -26,6 +28,8 @@ public class ShotScript : MonoBehaviour
 
 		//transfora a rotação em quaternion
 		quatRotation = Quaternion.Euler(rotation);
+
+		currentBullet = bullets[0];
 	}
 
 	//A cada frame
@@ -34,13 +38,33 @@ public class ShotScript : MonoBehaviour
 		//Se pasou o tempo de atirar
 		if(updateTime + shotTime <= Time.time)
 		{
-			//instancia a bala
-			Instantiate(bullet, transform.position, quatRotation);
-			//instancia o som da bala
-			Instantiate(laserSound, transform.position, Quaternion.identity);
+			if (currentBullet != null)
+			{
+				//instancia a bala
+				Instantiate(currentBullet, transform.position, quatRotation);
+				//instancia o som da bala
+				Instantiate(laserSound, transform.position, Quaternion.identity);
+			}
 
 			//Atualiza o tempo
 			updateTime = Time.time;
+		}
+
+		if (gameManager.i.rpm >= 0.75f && !gameManager.i.isShotBlocked)
+		{
+			currentBullet = bullets[2];
+		}
+		else if (gameManager.i.rpm >= 0.50f && !gameManager.i.isShotBlocked)
+		{
+			currentBullet = bullets[1];
+		}
+		else if (gameManager.i.rpm >= 0.25f && !gameManager.i.isShotBlocked)
+		{
+			currentBullet = bullets[0];
+		}
+		else
+		{
+			currentBullet = null;
 		}
 	}
 }

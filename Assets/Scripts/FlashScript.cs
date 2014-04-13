@@ -33,6 +33,8 @@ public class FlashScript : MonoBehaviour
 			CancelInvoke();
 			//Garante que termina habilitado
 			sRenderer.enabled = true;
+			//desbloqueia o tiro
+			gameManager.i.isShotBlocked = false;
 		}
 	}
 
@@ -51,6 +53,8 @@ public class FlashScript : MonoBehaviour
 		isFlashing = true;
 		//chama a funÇao de alternar visibilidade a cada 0.1 segundos
 		InvokeRepeating("alternateVisibility", 0, 0.1f);
+		//Bloqueia o tiro
+		gameManager.i.isShotBlocked = true;
 	}
 
 	//Função para alterna a visibilidade do objeto

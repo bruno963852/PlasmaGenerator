@@ -21,19 +21,22 @@ public class PgBarScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		slider.value = gameManager.i.rpm;
+		if (gameManager.i.isOnBikeMode)
+			slider.value = gameManager.i.rpm;
+		else
+			slider.value = 0.55f;
 
-		if (gameManager.i.rpm >= 0.75f && !gameManager.i.isShotBlocked)
+		if (slider.value >= 0.75f && !gameManager.i.isShotBlocked)
 		{
 			overlay.color = Color.cyan;
 			backGround.color = Color.green;
 		}
-		else if (gameManager.i.rpm >= 0.5f && !gameManager.i.isShotBlocked)
+		else if (slider.value >= 0.5f && !gameManager.i.isShotBlocked)
 		{
 			overlay.color = Color.green;
 			backGround.color = Color.green;
 		}
-		else if (gameManager.i.rpm >= 0.25f && !gameManager.i.isShotBlocked)
+		else if (slider.value >= 0.25f && !gameManager.i.isShotBlocked)
 		{
 			overlay.color = Color.blue;
 			backGround.color = Color.green;

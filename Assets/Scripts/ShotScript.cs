@@ -15,6 +15,8 @@ public class ShotScript : MonoBehaviour
 	//bala atual
 	private GameObject currentBullet;
 
+	public UISlider slider;
+
 	//tempo...
 	private float updateTime;
 	//rotação em quaternion
@@ -50,15 +52,15 @@ public class ShotScript : MonoBehaviour
 			updateTime = Time.time;
 		}
 
-		if (gameManager.i.rpm >= 0.75f && !gameManager.i.isShotBlocked)
+		if (slider.value >= 0.75f && !gameManager.i.isShotBlocked)
 		{
 			currentBullet = bullets[2];
 		}
-		else if (gameManager.i.rpm >= 0.50f && !gameManager.i.isShotBlocked)
+		else if (slider.value >= 0.50f && !gameManager.i.isShotBlocked)
 		{
 			currentBullet = bullets[1];
 		}
-		else if (gameManager.i.rpm >= 0.25f && !gameManager.i.isShotBlocked)
+		else if (slider.value >= 0.25f && !gameManager.i.isShotBlocked)
 		{
 			currentBullet = bullets[0];
 		}

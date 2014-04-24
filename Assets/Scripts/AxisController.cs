@@ -100,37 +100,63 @@ public class AxisController : MonoBehaviour
 	//método para checar o apertar dos botões
 	private void checkButtonState()
 	{
-		//se o botão essquerdo foi apertado e não estava apertado antes
-		if (gameManager.i.btController.getLeftButtonDown() && bState != ButtonState.leftDown)
-		{
-			//se restartPnPress foi marcado
-			if(restatOnPress)
-				//começa do zero
-				axis = 0;
-			//seta o estado dos botões
-			bState = ButtonState.leftDown;
+		if (gameManager.i.isOnBikeMode)
+			{
+			//se o botão essquerdo foi apertado e não estava apertado antes
+			if (gameManager.i.btController.getLeftButtonDown() && bState != ButtonState.leftDown)
+			{
+				//se restartPnPress foi marcado
+				if(restatOnPress)
+					//começa do zero
+					axis = 0;
+				//seta o estado dos botões
+				bState = ButtonState.leftDown;
+			}
+			//se o botão direito foi apertado e não estava apertado antes
+			if (gameManager.i.btController.getRightButtonDown() && bState != ButtonState.rightDown)
+			{
+				//se restartPnPress foi marcado
+				if(restatOnPress)
+					//começa do zero
+					axis = 0;
+				//seta o estado dos botões
+				bState = ButtonState.rightDown;
+			}
+			//se o botão esquerdo estava apertado e foi solto
+			if (gameManager.i.btController.getLeftButtonUp() && bState == ButtonState.leftDown)
+			{
+				//seta o estado
+				bState = ButtonState.up;
+			}
+			//se o botão direito estada apertado e foi solto
+			if (gameManager.i.btController.getRightButtonUp() && bState == ButtonState.rightDown)
+			{
+				//seta o estado
+				bState = ButtonState.up;
+			}
 		}
-		//se o botão direito foi apertado e não estava apertado antes
-		if (gameManager.i.btController.getRightButtonDown() && bState != ButtonState.rightDown)
+		//Se não estiver com a bike
+		else
 		{
-			//se restartPnPress foi marcado
-			if(restatOnPress)
-				//começa do zero
-				axis = 0;
-			//seta o estado dos botões
-			bState = ButtonState.rightDown;
-		}
-		//se o botão esquerdo estava apertado e foi solto
-		if (gameManager.i.btController.getLeftButtonUp() && bState == ButtonState.leftDown)
-		{
-			//seta o estado
-			bState = ButtonState.up;
-		}
-		//se o botão direito estada apertado e foi solto
-		if (gameManager.i.btController.getRightButtonUp() && bState == ButtonState.rightDown)
-		{
-			//seta o estado
-			bState = ButtonState.up;
+			//pega o toque
+			Touch touch = Input.GetTouch(0);
+
+			//se foi toque
+			if (touch.phase == TouchPhase.Began)
+			{
+				if (touch.position.x <= 640)
+				{
+					bState = ButtonState.leftDown;
+				}
+				else
+				{
+					bState = ButtonState.rightDown;
+				}
+			}
+			else if (touch.phase == TouchPhase.Ended)
+			{
+				bState = ButtonState.up;
+			}
 		}
 	}
 }

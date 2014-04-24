@@ -10,6 +10,7 @@ public class StartScreenGuiController : MonoBehaviour
 
 	public UILabel conPlayLabel;
 	public UILabel deviceLabel;
+	public UIToggle bikeToggle;
 
 	// Use this for initialization
 	void Start () 
@@ -19,6 +20,7 @@ public class StartScreenGuiController : MonoBehaviour
 			Debug.Log(item);
 				}
 		deviceLabel.text = devices[0];
+
 	}
 	
 	// Update is called once per frame
@@ -46,6 +48,7 @@ public class StartScreenGuiController : MonoBehaviour
 		switch (conState) 
 		{
 		case ConnectionState.notConnected:
+			bikeToggle.enabled = false;
 			connectDevice();
 			break;
 		case ConnectionState.Connecting:
@@ -73,6 +76,22 @@ public class StartScreenGuiController : MonoBehaviour
 		{
 			deviceIndex++;
 			deviceLabel.text = devices[deviceIndex];
+		}
+	}
+
+	public void OnBikeToggleChange()
+	{
+		if (bikeToggle.value)
+		{
+			conState = ConnectionState.notConnected;
+			gameManager.i.isOnBikeMode = true;
+			conPlayLabel.text = "Connect";
+		}
+		else
+		{
+			conState = ConnectionState.Connected;
+			gameManager.i.isOnBikeMode = false;
+			conPlayLabel.text = "Play!";
 		}
 	}
 }

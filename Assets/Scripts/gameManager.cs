@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
+using System;
+using System.IO;
 
 //Esse script é o gerenciador do jogo
 //Se comporta como um singletom
@@ -34,7 +37,7 @@ public class gameManager : MonoBehaviour
 	public bool isShotBlocked = false;
 
 	//Lista de high scores
-	public HighScores highScores;
+	public List<ScoreEntry> highScores;
 
 	//Se está no modo bicicleta
 	public bool isOnBikeMode = true;
@@ -50,6 +53,9 @@ public class gameManager : MonoBehaviour
 
 			//Essa é A instância
 			i = this;
+
+			//inicializa o controlador BT
+			this.btController = new BlueToothController();
 		}
 		//Se houver uma instância e não for essa
 		else if (i != this)
@@ -58,14 +64,16 @@ public class gameManager : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 
-		//inicializa o controlador BT
-		this.btController = new BlueToothController();
+
 	}
 
 	// Ao instanciar
 	void Start () 
 	{
 		updateTime = Time.timeSinceLevelLoad;
+
+		//Carrega os Scores
+		LoadScores();
 	}
 	
 	// Update is called once per frame
@@ -81,71 +89,68 @@ public class gameManager : MonoBehaviour
 			updateTime = Time.timeSinceLevelLoad;
 		}
 
+		if (gameTime == 0)
+		{
+			Application.LoadLevel(2);
+		}
+
 		if (!setRpmManually)
 			rpm = btController.getRpm()/maxGenRpm;
 	}
 
-/*	public void SaveScore(Score score)
+	public void SaveScores()
 	{
-		
+		//binary formatter
+		BinaryFormatter b = new BinaryFormatter();
+		//memory stream
+		MemoryStream m = new MemoryStream();
+		//salva os scores
+		b.Serialize(m, highScores);
+		//salva no playerprefs
+		PlayerPrefs.SetString("HighScores", Convert.ToBase64String(m.GetBuffer()));
 	}
 
-	public void saveTestScores()
+	public void LoadScores()
 	{
-		highScores = new HighScores();
-		Score score = new Score();
-		score.name = "AAA";
-		score.score = 35;
-		highScores.list.Add(score);
-		score = new Score();
-		score.name = "BBB";
-		score.score = 50;
-		highScores.list.Add(score);
-		score = new Score();
-		score.name = "CCC";
-		score.score = 70;
-		highScores.list.Add(score);
-
-		highScores.list.Sort(new myComparer());
-
-		pushHighScores();
-	}
-
-	private void pushHighScores()
-	{
-		BinaryFormatter formatter = new BinaryFormatter();
-		byte[] data = formatter.Serialize();
-		string dataString = System.Convert.ToBase64String(data);
-		PlayerPrefs.SetString("HighScores", dataString);
-	}
-
-	private void pullHighScores()
-	{
-		string dataString = PlayerPrefs.GetString("HighScores");
-		if (!dataString.Equals(""));
+		//Pega os scores
+		string data = PlayerPrefs.GetString("HighScores");
+		//carrega se não for nulo
+		if(!string.IsNullOrEmpty(data))
 		{
-			byte[] data = System.Convert.FromBase64String(dataString);
-			BinaryFormatter formatter = new BinaryFormatter();
-			highScores = (HighScores) formatter.Deserialize(data);
+			//Binary formatter
+			BinaryFormatter b = new BinaryFormatter();
+			//Cria a memorystream
+			MemoryStream m = new MemoryStream(Convert.FromBase64String(data));
+			//Salva no atributo
+			highScores = (List<ScoreEntry>)b.Deserialize(m);
 		}
-	}*/
+	}
+
+	public void addScore(ScoreEntry score)
+	{
+		highScores.Add(score);
+
+		highScores.Sort();
+
+		if (highScores.Count > 10)
+		{
+			highScores.RemoveAt(10);
+		}
+
+		SaveScores();
+	}
 }
 
-public class HighScores
-{
-	public ArrayList list;
-}
-
-public class Score
+public class ScoreEntry : IComparable<ScoreEntry>
 {
 	public string name;
 	public int score;
-}
 
-/*public class myComparer : IComparer
-{
-	int IComparer.Compare(object x, object y)
+	public int CompareTo(ScoreEntry other)
 	{
-		return new Comparer().Compare(((Score)x).score, ((Score)y).score);
+		if (other == null)
+			return 1;
+
+		return score.CompareTo(other.score);
 	}
-}*/
+}

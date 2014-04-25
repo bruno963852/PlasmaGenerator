@@ -186,7 +186,9 @@
      <Compile Include="Assets\Scripts\EnemyZigZag.cs" />
      <Compile Include="Assets\Scripts\EnemyaxisController.cs" />
      <Compile Include="Assets\Scripts\FlashScript.cs" />
+     <Compile Include="Assets\Scripts\GameOverGuiController.cs" />
      <Compile Include="Assets\Scripts\GeneralBurstSpawner.cs" />
+     <Compile Include="Assets\Scripts\HighScoresGuiController.cs" />
      <Compile Include="Assets\Scripts\OBurstSpawner.cs" />
      <Compile Include="Assets\Scripts\PgBarScript.cs" />
      <Compile Include="Assets\Scripts\PointsGUIScript.cs" />

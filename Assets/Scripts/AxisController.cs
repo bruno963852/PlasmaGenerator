@@ -138,12 +138,11 @@ public class AxisController : MonoBehaviour
 		//Se não estiver com a bike
 		else
 		{
-			//pega o toque
-			Touch touch = Input.GetTouch(0);
-
-			//se foi toque
-			if (touch.phase == TouchPhase.Began)
+			if (Input.touchCount > 0)
 			{
+				//pega o toque
+				Touch touch = Input.GetTouch(0);
+
 				if (touch.position.x <= 640)
 				{
 					bState = ButtonState.leftDown;
@@ -153,7 +152,7 @@ public class AxisController : MonoBehaviour
 					bState = ButtonState.rightDown;
 				}
 			}
-			else if (touch.phase == TouchPhase.Ended)
+			else
 			{
 				bState = ButtonState.up;
 			}

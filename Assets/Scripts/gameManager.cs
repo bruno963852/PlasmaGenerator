@@ -75,23 +75,44 @@ public class gameManager : MonoBehaviour
 		//Carrega os Scores
 		LoadScores();
 	}
+
+	void OnLevelWasLoaded(int level)
+	{
+		Debug.Log("Level 1 carregado");
+		if (level == 1)
+		{
+			updateTime = Time.timeSinceLevelLoad;
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		//se passou um segundo
-		if (updateTime + 1 <= Time.timeSinceLevelLoad)
+		if (Application.loadedLevel == 1)
 		{
-			//decrementa o tempo da partida
-			gameTime--;
-			
-			//atualiza o tempo
-			updateTime = Time.timeSinceLevelLoad;
-		}
 
-		if (gameTime == 0)
+			//se passou um segundo
+			if (updateTime + 1 <= Time.timeSinceLevelLoad)
+			{
+				//decrementa o tempo da partida
+				gameTime--;
+
+				Debug.Log("Passou 1 segundo");
+				
+				//atualiza o tempo
+				updateTime = Time.timeSinceLevelLoad;
+			}
+
+			if (gameTime == 0)
+			{
+				gameTime--;
+				Debug.Log("Tempo Acabou, Carregando Game OVer...");
+				Application.LoadLevel(2);
+			}
+		}
+		if (Input.GetKey(KeyCode.Escape))
 		{
-			Application.LoadLevel(2);
+			Application.Quit();
 		}
 
 		if (!setRpmManually)
@@ -124,6 +145,50 @@ public class gameManager : MonoBehaviour
 			//Salva no atributo
 			highScores = (List<ScoreEntry>)b.Deserialize(m);
 		}
+		else
+		{
+			highScores = new List<ScoreEntry>();
+			ScoreEntry scoreEntry = new ScoreEntry();
+			scoreEntry.name = "aaa";
+			scoreEntry.score = 500;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "bbb";
+			scoreEntry.score = 450;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "ccc";
+			scoreEntry.score = 400;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "ddd";
+			scoreEntry.score = 350;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "eee";
+			scoreEntry.score = 300;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "fff";
+			scoreEntry.score = 250;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "ggg";
+			scoreEntry.score = 200;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "hhh";
+			scoreEntry.score = 150;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "iii";
+			scoreEntry.score = 100;
+			highScores.Add(scoreEntry);
+			scoreEntry = new ScoreEntry();
+			scoreEntry.name = "jjj";
+			scoreEntry.score = 50;
+			highScores.Add(scoreEntry);
+		}
 	}
 
 	public void addScore(ScoreEntry score)
@@ -139,8 +204,10 @@ public class gameManager : MonoBehaviour
 
 		SaveScores();
 	}
+	
 }
 
+[Serializable]
 public class ScoreEntry : IComparable<ScoreEntry>
 {
 	public string name;
@@ -149,8 +216,8 @@ public class ScoreEntry : IComparable<ScoreEntry>
 	public int CompareTo(ScoreEntry other)
 	{
 		if (other == null)
-			return 1;
+			return -1;
 
-		return score.CompareTo(other.score);
+		return -score.CompareTo(other.score);
 	}
 }

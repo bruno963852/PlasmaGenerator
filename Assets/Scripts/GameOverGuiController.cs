@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameOverGuiController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class GameOverGuiController : MonoBehaviour {
 	void Start () 
 	{
 		scoreLabel.text = gameManager.i.points.ToString();
+		Debug.Log("Tela de Game Over");
 	}
 	
 	// Update is called once per frame
@@ -30,4 +32,5 @@ public class GameOverGuiController : MonoBehaviour {
 		gameManager.i.addScore(new ScoreEntry() {score = gameManager.i.points, name = uiInput.value});
 		Application.LoadLevel(3);
 	}
+
 }

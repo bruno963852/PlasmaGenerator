@@ -19,7 +19,10 @@ public class gameManager : MonoBehaviour
 	public int points = 0;
 
 	//Tempo da partida (em segundos)
-	public int gameTime = 60;
+	public int gameTime;
+
+	//tempo de duraçao da partida
+	public int gameDuration = 70;
 
 	//guarda o tempo
 	private float updateTime;
@@ -36,11 +39,20 @@ public class gameManager : MonoBehaviour
 	//bloqueia o tiro da nave
 	public bool isShotBlocked = false;
 
+	//Reduz os rpms
+	public bool isRpmReduced = false;
+
+	//Valor de redução de RPM
+	public int rpmReducingValue = 2;
+
 	//Lista de high scores
 	public List<ScoreEntry> highScores;
 
 	//Se está no modo bicicleta
 	public bool isOnBikeMode = true;
+
+	//se deve ser mostrada o valor da rpm
+	public bool showRpm = true;
 
 	//Logo antes de instanciar
 	void Awake()
@@ -64,7 +76,7 @@ public class gameManager : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 
-
+		gameTime = gameDuration;
 	}
 
 	// Ao instanciar
@@ -116,7 +128,12 @@ public class gameManager : MonoBehaviour
 		}
 
 		if (!setRpmManually)
-			rpm = btController.getRpm()/maxGenRpm;
+		{
+			if (isOnBikeMode)
+				rpm = (btController.getRpm() - (isRpmReduced? rpmReducingValue : 0))/maxGenRpm;
+			else
+				rpm = (6 - (isRpmReduced? rpmReducingValue : 0))/maxGenRpm;
+		}
 	}
 
 	public void SaveScores()
@@ -203,6 +220,13 @@ public class gameManager : MonoBehaviour
 		}
 
 		SaveScores();
+	}
+
+	public void resetGame()
+	{
+		gameTime = gameDuration;
+		points = 0;
+		Application.LoadLevel(1);
 	}
 	
 }

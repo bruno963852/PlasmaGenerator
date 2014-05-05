@@ -21,10 +21,7 @@ public class PgBarScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (gameManager.i.isOnBikeMode)
-			slider.value = gameManager.i.rpm;
-		else
-			slider.value = 0.55f;
+		slider.value = gameManager.i.rpm;
 
 		if (slider.value >= 0.75f && !gameManager.i.isShotBlocked)
 		{

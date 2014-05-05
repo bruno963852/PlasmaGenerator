@@ -194,6 +194,7 @@
      <Compile Include="Assets\Scripts\PointsGUIScript.cs" />
      <Compile Include="Assets\Scripts\ShipController.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />
+     <Compile Include="Assets\Scripts\ShowRpmScript.cs" />
      <Compile Include="Assets\Scripts\Stage01GUIScript.cs" />
      <Compile Include="Assets\Scripts\StartScreenGuiController.cs" />
      <Compile Include="Assets\Scripts\TimeGUIScript.cs" />

@@ -35,6 +35,8 @@ public class FlashScript : MonoBehaviour
 			sRenderer.enabled = true;
 			//desbloqueia o tiro
 			gameManager.i.isShotBlocked = false;
+			//remove a redução de rpm
+			gameManager.i.isRpmReduced = false;
 		}
 	}
 
@@ -54,7 +56,9 @@ public class FlashScript : MonoBehaviour
 		//chama a funÇao de alternar visibilidade a cada 0.1 segundos
 		InvokeRepeating("alternateVisibility", 0, 0.1f);
 		//Bloqueia o tiro
-		gameManager.i.isShotBlocked = true;
+		//gameManager.i.isShotBlocked = true;
+		//reduz o rpm
+		gameManager.i.isRpmReduced = true;
 	}
 
 	//Função para alterna a visibilidade do objeto

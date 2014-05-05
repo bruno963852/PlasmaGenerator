@@ -11,6 +11,7 @@ public class StartScreenGuiController : MonoBehaviour
 	public UILabel conPlayLabel;
 	public UILabel deviceLabel;
 	public UIToggle bikeToggle;
+	public UIToggle rpmToggle;
 
 	// Use this for initialization
 	void Start () 
@@ -93,6 +94,11 @@ public class StartScreenGuiController : MonoBehaviour
 			gameManager.i.isOnBikeMode = false;
 			conPlayLabel.text = "Play!";
 		}
+	}
+
+	public void OnRpmToggleChange()
+	{
+		gameManager.i.showRpm = rpmToggle.value;
 	}
 }
 enum ConnectionState

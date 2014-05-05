@@ -27,9 +27,7 @@ public class HighScoresGuiController : MonoBehaviour {
 
 	public void OnPlayAgainBtnPress()
 	{
-		gameManager.i.gameTime =  60;
-		gameManager.i.points = 0;
-		Application.LoadLevel(1);
+		gameManager.i.resetGame();
 	}
 
 	public void OnExitBtnPress()

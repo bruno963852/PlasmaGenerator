@@ -54,6 +54,7 @@ public class gameManager : MonoBehaviour
 	//se deve ser mostrada o valor da rpm
 	public bool showRpm = true;
 
+
 	//Logo antes de instanciar
 	void Awake()
 	{

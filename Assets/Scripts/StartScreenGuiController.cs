@@ -10,6 +10,7 @@ public class StartScreenGuiController : MonoBehaviour
 
 	public UILabel conPlayLabel;
 	public UILabel deviceLabel;
+	public UILabel refSpeedLabel;
 	public UIToggle bikeToggle;
 	public UIToggle rpmToggle;
 
@@ -22,6 +23,7 @@ public class StartScreenGuiController : MonoBehaviour
 				}
 		deviceLabel.text = devices[0];
 
+		refSpeedLabel.text = "RefSpeed: " + gameManager.i.maxGenRpm;
 	}
 	
 	// Update is called once per frame
@@ -77,6 +79,21 @@ public class StartScreenGuiController : MonoBehaviour
 		{
 			deviceIndex++;
 			deviceLabel.text = devices[deviceIndex];
+		}
+	}
+
+	public void OnPlusBtnClick()
+	{
+		gameManager.i.maxGenRpm++;
+		refSpeedLabel.text = "RefSpeed: " + gameManager.i.maxGenRpm;
+	}
+
+	public void OnMinusBtnClick()
+	{
+		if (gameManager.i.maxGenRpm > 0)
+		{
+			gameManager.i.maxGenRpm--;
+			refSpeedLabel.text = "RefSpeed: " + gameManager.i.maxGenRpm;
 		}
 	}
 

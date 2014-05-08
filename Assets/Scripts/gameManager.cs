@@ -19,10 +19,10 @@ public class gameManager : MonoBehaviour
 	public int points = 0;
 
 	//Tempo da partida (em segundos)
-	public int gameTime;
+	public int gameTime = 80;
 
 	//tempo de duraçao da partida
-	public int gameDuration = 70;
+	public int gameDuration = 80;
 
 	//guarda o tempo
 	private float updateTime;
@@ -101,28 +101,6 @@ public class gameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Application.loadedLevel == 1)
-		{
-
-			//se passou um segundo
-			if (updateTime + 1 <= Time.timeSinceLevelLoad)
-			{
-				//decrementa o tempo da partida
-				gameTime--;
-
-				Debug.Log("Passou 1 segundo");
-				
-				//atualiza o tempo
-				updateTime = Time.timeSinceLevelLoad;
-			}
-
-			if (gameTime == 0)
-			{
-				gameTime--;
-				Debug.Log("Tempo Acabou, Carregando Game OVer...");
-				Application.LoadLevel(2);
-			}
-		}
 		if (Input.GetKey(KeyCode.Escape))
 		{
 			Application.Quit();
@@ -165,47 +143,14 @@ public class gameManager : MonoBehaviour
 		}
 		else
 		{
-			highScores = new List<ScoreEntry>();
-			ScoreEntry scoreEntry = new ScoreEntry();
-			scoreEntry.name = "aaa";
-			scoreEntry.score = 500;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "bbb";
-			scoreEntry.score = 450;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "ccc";
-			scoreEntry.score = 400;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "ddd";
-			scoreEntry.score = 350;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "eee";
-			scoreEntry.score = 300;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "fff";
-			scoreEntry.score = 250;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "ggg";
-			scoreEntry.score = 200;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "hhh";
-			scoreEntry.score = 150;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "iii";
-			scoreEntry.score = 100;
-			highScores.Add(scoreEntry);
-			scoreEntry = new ScoreEntry();
-			scoreEntry.name = "jjj";
-			scoreEntry.score = 50;
-			highScores.Add(scoreEntry);
+			for (int i = 0; i < 10; i++)
+			{
+				highScores = new List<ScoreEntry>();
+				ScoreEntry scoreEntry = new ScoreEntry();
+				scoreEntry.name = "aaa";
+				scoreEntry.score = 700;
+				highScores.Add(scoreEntry);
+			}
 		}
 	}
 
